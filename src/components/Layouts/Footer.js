@@ -90,7 +90,7 @@ function Footer() {
               </Link> */}
               <a
                 target="blank"
-                href="https://www.instagram.com/its._.tejas._.2607/"
+                href="https://www.instagram.com/tejas._borde/"
                 className="link"
                 data-aos="fade-in"
               >
