@@ -4,7 +4,7 @@ import Result from "./Result";
 
 const QuizComponent = (props) => {
   const { quiz_id } = useParams();
-  const [quiz, setquiz] = useState(props.QuizList[quiz_id - 1]);
+  const quiz = props.QuizList[quiz_id - 1];
   const [currentQuestion, setcurrentQuestion] = useState(quiz.Questions[0]);
   const [allowResponse, setallowResponse] = useState(true);
   const [currentQuestionStatus, setcurrentQuestionStatus] = useState(null);

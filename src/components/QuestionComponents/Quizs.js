@@ -1,12 +1,9 @@
-import React, { useContext } from "react";
-import { Link, useParams } from "react-router-dom";
-import { Quizzs } from "../../App";
+import React from "react";
+import { Link } from "react-router-dom";
+
 import { BiArrowBack } from "react-icons/bi";
 
-const Quizs = (props) => {
-  const QuizList = useContext(Quizzs);
-  const { subject } = useParams();
-
+const Quizs = () => {
   return (
     <div className="quizs">
       <div className="container">
