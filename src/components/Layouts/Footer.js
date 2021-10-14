@@ -97,7 +97,7 @@ function Footer() {
               >
                 <FiInstagram />
               </a>
-              <a target="blank" href="" className="link" data-aos="fade-in">
+              <a target="blank" href="#/" className="link" data-aos="fade-in">
                 <FaLinkedinIn />
               </a>
               {/* <Link target="blank" href="#" className="link" data-aos="fade-in">
