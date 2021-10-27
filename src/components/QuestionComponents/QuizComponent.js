@@ -137,7 +137,8 @@ const QuizComponent = (props) => {
   const displaySearchedRecords = (searchText) => {
     searchText = searchText.trim();
     if (searchText !== null && searchText !== "" && searchText !== undefined) {
-      const searchRecords = quiz.Questions.filter((record) => {
+      const searchRecords = [];
+      quiz.Questions.forEach((record) => {
         let no = record.que_no.toString();
         if (no === searchText) {
           return record;
@@ -163,7 +164,7 @@ const QuizComponent = (props) => {
     <div className="quiz-component">
       <div className="container quiz-question-component">
         <h5 style={{ fontWeight: "600" }}>
-          {quiz.name} - {quiz.topic}
+          Chapter-{quiz.chapter_no}-{quiz.name}
         </h5>
       </div>
       <div className="container quiz-question-component">

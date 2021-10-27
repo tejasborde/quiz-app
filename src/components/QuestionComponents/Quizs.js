@@ -30,6 +30,7 @@ const Quizs = (props) => {
               <div className="container quiz-list-component">
                 <div className="row">
                   <div className="col-6">
+                    <div className="row">Chapter-{quiz.chapter_no}</div>
                     <div className="row">Name : {quiz.name}</div>
                     <div className="row">Subject : {quiz.subject}</div>
                     {/* <div className="row">Topic : {quiz.topic}</div> */}

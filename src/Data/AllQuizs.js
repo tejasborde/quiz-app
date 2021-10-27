@@ -82,9 +82,10 @@
 export const AllQuizList = [
   {
     _id: 1,
+    chapter_no: 1,
     name: "Nature and Scope of Business Economics",
     subject: "Economics",
-    topic: "Nature and Scope of Business Economics",
+    topic: "",
     Questions: [
       {
         que_no: 1,
