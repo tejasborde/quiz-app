@@ -129,7 +129,7 @@ import { MdClear } from "react-icons/md";
 
 const QuizComponent = (props) => {
   const { quiz_id } = useParams();
-  const [quiz, setquiz] = useState(props.QuizList[quiz_id - 1]);
+  const quiz = props.QuizList[quiz_id - 1];
   const [questions, setQuestions] = useState(quiz.Questions);
   const [optionClicked, setoptionClicked] = useState([false]);
   const [searchValue, setsearchValue] = useState("");

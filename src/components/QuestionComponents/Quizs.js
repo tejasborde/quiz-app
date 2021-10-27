@@ -9,10 +9,9 @@ const Quizs = (props) => {
   const { subject } = useParams();
 
   useEffect(() => {
-    let data = [];
-    QuizList.map((quiz) => {
+    let data = QuizList.map((quiz) => {
       if (quiz.subject === subject) {
-        data.push(quiz);
+        return quiz;
       }
     });
     setQuizs(data);
