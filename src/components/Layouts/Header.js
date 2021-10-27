@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { RiHome2Line } from "react-icons/ri";
-import { FiMail } from "react-icons/fi";
+// import { FiMail } from "react-icons/fi";
 import { BsQuestionCircle } from "react-icons/bs";
 
 const Header = () => {
