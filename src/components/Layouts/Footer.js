@@ -47,12 +47,12 @@ function Footer() {
                 <Link to={"/quizes"}>Quizzes</Link>
               </li>
 
-              <li data-aos="fade-in">
+              {/* <li data-aos="fade-in">
                 <MdKeyboardArrowRight />
                 <Link to={"/contact"} className="foot-link">
                   Contact Us
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
 
@@ -90,14 +90,19 @@ function Footer() {
               </Link> */}
               <a
                 target="blank"
-                href={"#/https://www.instagram.com/tejas._borde/"}
+                href={"https://www.instagram.com/tejas._borde/"}
                 className="link"
                 data-aos="fade-in"
                 rel="noopener noreferrer"
               >
                 <FiInstagram />
               </a>
-              <a target="blank" href="#/" className="link" data-aos="fade-in">
+              <a
+                target="blank"
+                href="https://www.linkedin.com/in/tejas-borde-17577a191/"
+                className="link"
+                data-aos="fade-in"
+              >
                 <FaLinkedinIn />
               </a>
               {/* <Link target="blank" href="#" className="link" data-aos="fade-in">

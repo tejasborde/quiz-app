@@ -299,7 +299,7 @@ a:hover {
   padding: 2rem;
   background: #ffff;
   border-radius: 5px;
-  width: 50%;
+  width: 70%;
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
@@ -328,6 +328,24 @@ a:hover {
 /* End Quiz */
 
 /* Quiz Component */
+
+/* Recent App Style*/
+.question-no-block {
+  background-color: #000000;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 4px;
+  margin: 0 0.5rem;
+}
+.option-block {
+  background-color: #262834;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 4px;
+  margin: 0 0.5rem;
+}
+/* End Of Recent App Style*/
+
 .quiz-component {
   min-height: 70vh;
   margin-top: 9vh;
@@ -339,8 +357,16 @@ a:hover {
   padding: 2rem;
   background: #ffff;
   border-radius: 5px;
-  width: 50%;
+  /* width: 50%; */
+  width: 90%;
+  /* max-height: 60vh;
+  overflow-y: scroll; */
   margin-bottom: 2rem;
+}
+
+.quiz-component .questions {
+  max-height: 40vh;
+  overflow-y: scroll;
 }
 
 .problem-statment {
@@ -412,9 +438,32 @@ a:hover {
 
 .red {
   background-color: rgba(255, 0, 0, 0.788);
+  color: #262834;
+  font-size: 12px;
 }
 .green {
   background-color: greenyellow;
+  color: #262834;
+  font-size: 12px;
+}
+
+.search-box input {
+  width: 25%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-right: 10px;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  outline: none;
 }
 
 /* Subjects List */

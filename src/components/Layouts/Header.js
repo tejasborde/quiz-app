@@ -57,7 +57,7 @@ const Header = () => {
                 </NavLink>
               </li>
 
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <NavLink
                   className="nav-link text-center"
                   to={"/contact"}
@@ -66,7 +66,7 @@ const Header = () => {
                   Contact Us
                   <FiMail style={{ marginLeft: 5, marginBottom: 4 }} />
                 </NavLink>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
