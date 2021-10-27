@@ -234,12 +234,20 @@ const QuizComponent = (props) => {
                     </div>
                     {optionClicked[0] && index === optionClicked[1] ? (
                       optionClicked[2] ? (
-                        <div className="col-sm-1 option-block green">
-                          Correct Answer : {optionClicked[3]}
+                        <div
+                          className="col-sm-1 option-block green"
+                          style={{ fontWeight: "600" }}
+                        >
+                          {/* Correct Answer : {optionClicked[3]} */}
+                          Correct
                         </div>
                       ) : (
-                        <div className="col-sm-1 option-block red">
-                          Correct Answer : {optionClicked[3]}
+                        <div
+                          className="col-sm-1 option-block red"
+                          style={{ fontWeight: "600" }}
+                        >
+                          {/* Correct Answer : {optionClicked[3]} */}
+                          Incorrect
                         </div>
                       )
                     ) : (
