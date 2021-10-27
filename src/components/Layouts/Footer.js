@@ -44,7 +44,7 @@ function Footer() {
               </li>
               <li data-aos="fade-in">
                 <MdKeyboardArrowRight />
-                <Link to={"/quizes"}>Quizzes</Link>
+                <Link to={"/quizzes/subjects"}>Quizzes</Link>
               </li>
 
               {/* <li data-aos="fade-in">
