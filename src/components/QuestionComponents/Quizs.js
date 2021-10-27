@@ -16,7 +16,7 @@ const Quizs = (props) => {
       }
     });
     setQuizs(data);
-  }, []);
+  }, [subject, QuizList]);
 
   return (
     <div className="quizs">
