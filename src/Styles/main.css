@@ -272,8 +272,8 @@ a:hover {
 /* End Back Button */
 /* Home */
 .home {
-  height: 40vh;
-  margin-top: 9vh;
+  height: 62vh;
+  margin-top: 7vh;
   background: #262834;
 }
 
@@ -290,7 +290,7 @@ a:hover {
 /* Quiz */
 .quizs {
   min-height: 60vh;
-  margin-top: 9vh;
+  margin-top: 7vh;
   padding-top: 4rem;
   background: #262834;
 }
@@ -476,7 +476,7 @@ a:hover {
 /* Subjects List */
 .subjects {
   min-height: 70vh;
-  margin-top: 9vh;
+  margin-top: 7vh;
   padding-top: 4rem;
   background: #262834;
 }
