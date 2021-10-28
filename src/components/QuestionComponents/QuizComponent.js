@@ -127,6 +127,26 @@ import { MdClear } from "react-icons/md";
 //   );
 // };
 
+// Display Answer Code
+// {optionClicked[0] && index === optionClicked[1] ? (
+//   optionClicked[2] ? (
+//     <div
+//       className="col-sm-1 option-block green"
+//       style={{ fontWeight: "600" }}
+//     >
+//       {/* Correct Answer : {optionClicked[3]} */}
+//       Correct
+//     </div>
+//   ) : (
+//     <div className="col-sm-1 option-block red" style={{ fontWeight: "600" }}>
+//       {/* Correct Answer : {optionClicked[3]} */}
+//       Incorrect
+//     </div>
+//   )
+// ) : (
+//   ""
+// )}
+
 const QuizComponent = (props) => {
   const { quiz_id } = useParams();
   const quiz = props.QuizList[quiz_id - 1];
@@ -140,8 +160,8 @@ const QuizComponent = (props) => {
       const searchRecords = [];
       quiz.Questions.forEach((record) => {
         let no = record.que_no.toString();
-        if (no === searchText) {
-          return record;
+        if (no.startsWith(searchText)) {
+          searchRecords.push(record);
         }
       });
       setQuestions(searchRecords);
@@ -153,19 +173,31 @@ const QuizComponent = (props) => {
   const displayAnswer = (given_ans, questionData, index) => {
     if (given_ans === questionData.correct_ans) {
       console.log("correct");
-      setoptionClicked([true, index, true, questionData.correct_ans]);
+      setoptionClicked([
+        true,
+        index,
+        true,
+        questionData.correct_ans,
+        given_ans,
+      ]);
     } else {
       console.log("incorrect");
-      setoptionClicked([true, index, false, questionData.correct_ans]);
+      setoptionClicked([
+        true,
+        index,
+        false,
+        questionData.correct_ans,
+        given_ans,
+      ]);
     }
   };
 
   return (
     <div className="quiz-component">
-      <div className="container quiz-question-component">
-        <h5 style={{ fontWeight: "600" }}>
+      <div className="container quiz-question-component quiz-title">
+        <p style={{ fontWeight: "600" }}>
           Chapter-{quiz.chapter_no}-{quiz.name}
-        </h5>
+        </p>
       </div>
       <div className="container quiz-question-component">
         <div className="search-box mb-3">
@@ -196,64 +228,97 @@ const QuizComponent = (props) => {
           {questions.length > 0
             ? questions.map((question, index) => {
                 return (
-                  <div className="row my-2">
-                    <div className="col-sm-2 question-no-block">
-                      Question {question.que_no}
-                    </div>
+                  <>
                     <div
-                      className="col-sm-2 option-block"
-                      onClick={() => {
-                        displayAnswer("A", question, index);
+                      className="row my-2"
+                      style={{
+                        display: "flex",
+                        justifyContent: "space-between",
                       }}
                     >
-                      A
+                      <div className="col-sm-2 question-no-block">
+                        Question {question.que_no}
+                      </div>
+                      <div
+                        className="col-sm-2 option-block"
+                        onClick={() => {
+                          displayAnswer("A", question, index);
+                        }}
+                        style={
+                          optionClicked[1] === index &&
+                          optionClicked[4] === "A" &&
+                          optionClicked[3] === "A"
+                            ? { background: "greenyellow", color: "black" }
+                            : optionClicked[1] === index &&
+                              optionClicked[4] === "A" &&
+                              optionClicked[3] !== "A"
+                            ? { background: "red", color: "black" }
+                            : {}
+                        }
+                      >
+                        A
+                      </div>
+                      <div
+                        className="col-sm-2 option-block"
+                        onClick={() => {
+                          displayAnswer("B", question, index);
+                        }}
+                        style={
+                          optionClicked[1] === index &&
+                          optionClicked[4] === "B" &&
+                          optionClicked[3] === "B"
+                            ? { background: "greenyellow", color: "black" }
+                            : optionClicked[1] === index &&
+                              optionClicked[4] === "B" &&
+                              optionClicked[3] !== "B"
+                            ? { background: "red", color: "black" }
+                            : {}
+                        }
+                      >
+                        B
+                      </div>
+                      <div
+                        className="col-sm-2 option-block"
+                        onClick={() => {
+                          displayAnswer("C", question, index);
+                        }}
+                        style={
+                          optionClicked[1] === index &&
+                          optionClicked[4] === "C" &&
+                          optionClicked[3] === "C"
+                            ? { background: "greenyellow", color: "black" }
+                            : optionClicked[1] === index &&
+                              optionClicked[4] === "C" &&
+                              optionClicked[3] !== "C"
+                            ? { background: "red", color: "black" }
+                            : {}
+                        }
+                      >
+                        C
+                      </div>
+                      <div
+                        className="col-sm-2 option-block"
+                        onClick={() => {
+                          displayAnswer("D", question, index);
+                        }}
+                        style={
+                          optionClicked[1] === index &&
+                          optionClicked[4] === "D" &&
+                          optionClicked[3] === "D"
+                            ? { background: "greenyellow", color: "black" }
+                            : optionClicked[1] === index &&
+                              optionClicked[4] === "D" &&
+                              optionClicked[3] !== "D"
+                            ? { background: "red", color: "black" }
+                            : {}
+                        }
+                      >
+                        D
+                      </div>
+                      {/* Display Answer Code */}
                     </div>
-                    <div
-                      className="col-sm-2 option-block"
-                      onClick={() => {
-                        displayAnswer("B", question, index);
-                      }}
-                    >
-                      B
-                    </div>
-                    <div
-                      className="col-sm-2 option-block"
-                      onClick={() => {
-                        displayAnswer("C", question, index);
-                      }}
-                    >
-                      C
-                    </div>
-                    <div
-                      className="col-sm-2 option-block"
-                      onClick={() => {
-                        displayAnswer("D", question, index);
-                      }}
-                    >
-                      D
-                    </div>
-                    {optionClicked[0] && index === optionClicked[1] ? (
-                      optionClicked[2] ? (
-                        <div
-                          className="col-sm-1 option-block green"
-                          style={{ fontWeight: "600" }}
-                        >
-                          {/* Correct Answer : {optionClicked[3]} */}
-                          Correct
-                        </div>
-                      ) : (
-                        <div
-                          className="col-sm-1 option-block red"
-                          style={{ fontWeight: "600" }}
-                        >
-                          {/* Correct Answer : {optionClicked[3]} */}
-                          Incorrect
-                        </div>
-                      )
-                    ) : (
-                      ""
-                    )}
-                  </div>
+                    <hr style={{ height: "2px" }} />
+                  </>
                 );
               })
             : "No Search Results"}

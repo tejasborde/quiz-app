@@ -27,26 +27,28 @@ const Quizs = (props) => {
         {Quizs.length > 0 ? (
           Quizs.map((quiz) => {
             return (
-              <div className="container quiz-list-component">
-                <div className="row">
-                  <div className="col-6">
-                    <div className="row">Chapter-{quiz.chapter_no}</div>
-                    <div className="row">Name : {quiz.name}</div>
-                    <div className="row">Subject : {quiz.subject}</div>
-                    {/* <div className="row">Topic : {quiz.topic}</div> */}
-                    <div className="row">
-                      Number of Questions : {quiz.Questions.length}
+              <>
+                <div className="container quiz-list-component">
+                  <div className="row small-screen">
+                    <div className="col-sm-12 col-md-6">
+                      <div className="row">Chapter-{quiz.chapter_no}</div>
+                      <div className="row">Name : {quiz.name}</div>
+                      <div className="row">Subject : {quiz.subject}</div>
+                      {/* <div className="row">Topic : {quiz.topic}</div> */}
+                      <div className="row">
+                        Number of Questions : {quiz.Questions.length}
+                      </div>
                     </div>
-                  </div>
-                  <div className="col-6 take-test">
-                    <div className="row">
-                      <Link to={"/quiz/" + quiz._id}>
-                        <button className="quiz-btn">Take a Quiz</button>
-                      </Link>
+                    <div className="col-sm-12 col-md-6 take-test ">
+                      <div className="row">
+                        <Link to={"/quiz/" + quiz._id}>
+                          <button className="quiz-btn">Take a Quiz</button>
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </>
             );
           })
         ) : (

@@ -5,6 +5,14 @@ import { RiHome2Line } from "react-icons/ri";
 import { BsQuestionCircle } from "react-icons/bs";
 
 const Header = () => {
+  const scrollToTop = () => {
+    removeShow();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+  const removeShow = () => {
+    document.getElementById("navbarNavDropdown").classList.remove("show");
+    document.getElementById("btn-toggle").classList.add("collapsed");
+  };
   return (
     <div className="app-header">
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -37,7 +45,7 @@ const Header = () => {
                   activeClassName="active"
                   aria-current="page"
                   to={"/"}
-                  //   onClick={scrollToTop}
+                  onClick={scrollToTop}
                 >
                   Home
                   <RiHome2Line style={{ marginLeft: 5, marginBottom: 4 }} />
@@ -48,7 +56,7 @@ const Header = () => {
                   className="nav-link text-center"
                   aria-current="page"
                   to={"/quizzes/subjects"}
-                  //   onClick={scrollToTop}
+                  onClick={scrollToTop}
                 >
                   Quizzes{" "}
                   <BsQuestionCircle

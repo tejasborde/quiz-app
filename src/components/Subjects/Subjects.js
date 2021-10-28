@@ -13,7 +13,7 @@ const Subjects = () => {
         <Route exact path={`${path}`}>
           <div className="subjects">
             <div className="container subject">
-              <div className="row">
+              <div className="row" style={{ textAlign: "center" }}>
                 {subjects.map((subject, index) => {
                   return (
                     <Link

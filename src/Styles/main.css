@@ -302,6 +302,11 @@ a:hover {
   width: 70%;
   margin-top: 2rem;
   margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.quiz-title {
+  font-size: 18px;
 }
 
 .take-test {
@@ -343,6 +348,7 @@ a:hover {
   padding: 0.5rem;
   border-radius: 4px;
   margin: 0 0.5rem;
+  cursor: pointer !important;
 }
 /* End Of Recent App Style*/
 
@@ -367,6 +373,7 @@ a:hover {
 .quiz-component .questions {
   max-height: 40vh;
   overflow-y: scroll;
+  text-align: center;
 }
 
 .problem-statment {
@@ -438,12 +445,12 @@ a:hover {
 
 .red {
   background-color: rgba(255, 0, 0, 0.788);
-  color: #262834;
+  color: #262834 !important;
   font-size: 12px;
 }
 .green {
   background-color: greenyellow;
-  color: #262834;
+  color: #262834 !important;
   font-size: 12px;
 }
 
@@ -480,4 +487,74 @@ a:hover {
   border-radius: 5px;
   margin: 1rem 1rem;
   color: black !important;
+}
+
+.scroll-to-top {
+  cursor: pointer;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 20px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background: white;
+  color: black;
+  z-index: 10;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 0.5rem !important;
+  }
+  .subjects {
+    margin-top: 5vh;
+    padding-top: 4rem;
+  }
+  .subjects .subject-list-component {
+    width: 80%;
+    margin: 1rem 10%;
+  }
+
+  .quizs {
+    margin-top: 4vh;
+    padding-top: 3rem;
+  }
+  .quiz-component .quiz-question-component {
+    padding: 1rem;
+  }
+
+  .quizs .quiz-list-component {
+    padding: 2rem;
+    width: 95%;
+    margin: 1rem;
+  }
+
+  .quizs .quiz-list-component .small-screen {
+    font-size: 12px;
+  }
+
+  .search-box input {
+    width: 80%;
+  }
+  .search-box input::placeholder {
+    font-size: 12px;
+  }
+
+  .quiz-title {
+    font-size: 14px;
+  }
+
+  .question-no-block {
+    padding: 0.5rem;
+    margin: 0.5rem 0.5rem;
+  }
+  .option-block {
+    padding: 0.5rem;
+    border-radius: 4px;
+    margin: 0.1rem 0.5rem;
+  }
 }
