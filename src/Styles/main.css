@@ -507,6 +507,9 @@ a:hover {
 }
 
 @media screen and (max-width: 768px) {
+  .home {
+    margin-top: 5vh;
+  }
   .navbar {
     padding: 0.5rem !important;
   }
@@ -521,6 +524,10 @@ a:hover {
 
   .quizs {
     margin-top: 4vh;
+    padding-top: 3rem;
+  }
+  .quiz-component {
+    margin-top: 5vh;
     padding-top: 3rem;
   }
   .quiz-component .quiz-question-component {
