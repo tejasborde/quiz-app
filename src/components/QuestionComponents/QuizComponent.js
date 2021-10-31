@@ -155,6 +155,7 @@ const QuizComponent = (props) => {
   const [searchValue, setsearchValue] = useState("");
 
   const displaySearchedRecords = (searchText) => {
+    setoptionClicked([false]);
     searchText = searchText.trim();
     if (searchText !== null && searchText !== "" && searchText !== undefined) {
       const searchRecords = [];

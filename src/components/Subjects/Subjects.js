@@ -3,7 +3,7 @@ import { useRouteMatch } from "react-router";
 import { Switch, Route, Link } from "react-router-dom";
 import Quizs from "../QuestionComponents/Quizs";
 
-const subjects = ["Maths", "Economics"];
+const subjects = ["Maths", "Economics", "BCK"];
 
 const Subjects = () => {
   const { path, url } = useRouteMatch();
