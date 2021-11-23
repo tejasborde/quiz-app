@@ -473,6 +473,16 @@ a:hover {
   outline: none;
 }
 
+.search-quiz-box {
+  background-color: #fff;
+  width: 70%;
+  margin-left: 15%;
+  padding: 1rem;
+  border-radius: 6px;
+}
+.search-quiz-box .search-box input {
+  width: 70% !important;
+}
 /* Subjects List */
 .subjects {
   min-height: 70vh;
@@ -563,5 +573,18 @@ a:hover {
     padding: 0.5rem;
     border-radius: 4px;
     margin: 0.1rem 0.5rem;
+  }
+  .search-quiz-box {
+    background-color: #fff;
+    width: 92%;
+    /* margin-left: 15%; */
+    margin-top: 2rem;
+    margin-left: 7%;
+    /* padding: 1rem; */
+    border-radius: 6px;
+  }
+  .search-quiz-box .search-box input {
+    width: 80% !important;
+    font-size: 8px !important;
   }
 }
